@@ -1,12 +1,12 @@
 from billetes import ATMHandler
 
 class BilleteCincuentaHandler(ATMHandler):
-    def dispense(self, amount):
-        if amount >= 50:
-            num_bills = amount // 50
-            remainder = amount % 50
-            print(f"Dispensing {num_bills} $50 bills")
-            if remainder > 0 and self.successor:
-                self.successor.dispense(remainder)
+    def dispensar(self, monto):
+        if monto >= 50:
+            num_bills = monto // 50
+            resto = monto % 50
+            print(f"se dispensaron {num_bills} $50 billetes")
+            if resto > 0 and self.successor:
+                self.successor.dispensar(resto)
         elif self.successor:
-            self.successor.dispense(amount)
+            self.successor.dispensar(resto)

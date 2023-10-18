@@ -1,4 +1,4 @@
-from service.billete10 import BilleteCienHandler
+from service.billete100 import BilleteCienHandler
 from service.billete50 import BilleteCincuentaHandler
 from service.billete20 import BilleteVeinteHandler
 from service.billete10 import BilleteDiezHandler
@@ -9,5 +9,7 @@ if __name__ == "__main__":
     veinte_handler = BilleteVeinteHandler()
     diez_handler = BilleteDiezHandler()
 
-    amount_to_withdraw = 370
-    cien_handler.dispense(amount_to_withdraw)
+    cantida_a_retirar = 370
+
+cien_handler.dispensar(cantida_a_retirar)
+

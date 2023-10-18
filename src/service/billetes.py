@@ -4,5 +4,5 @@ class ATMHandler(ABC):
     def __init__(self, successor=None):
         self.successor = successor
 
-    def dispense(self, amount):
+    def dispensar(self, monto):
         pass
