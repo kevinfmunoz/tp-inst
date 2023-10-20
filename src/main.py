@@ -1,15 +1,10 @@
-from service.billete100 import BilleteCienHandler
-from service.billete50 import BilleteCincuentaHandler
-from service.billete20 import BilleteVeinteHandler
-from service.billete10 import BilleteDiezHandler
+
+from controller.atmcontroller import ATMController
+from domain.atmmodel import ATMModel
 
 if __name__ == "__main__":
-    cien_handler = BilleteCienHandler()
-    cincuenta_handler = BilleteCincuentaHandler()
-    veinte_handler = BilleteVeinteHandler()
-    diez_handler = BilleteDiezHandler()
+    model = ATMModel()
+    controller = ATMController(model)
 
-    cantida_a_retirar = 370
-
-cien_handler.dispensar(cantida_a_retirar)
-
+    amount = int(input("Enter the amount to withdraw: $"))
+    controller.run(amount)
