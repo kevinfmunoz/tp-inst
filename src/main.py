@@ -1,4 +1,4 @@
-from controller.usuariobuilder import UsuarioBuilder
+from domain.usuariobuilder import UsuarioBuilder
 from controller.atmcontroller import ATMController
 from domain.atmmodel import ATMModel
 
@@ -18,13 +18,7 @@ def main():
     email = input("Email: ")
     direccion = input("Dirección: ")
     
-    usuario = usuario_builder \
-        .with_nombre(nombre) \
-        .with_apellido(apellido) \
-        .with_edad(edad) \
-        .with_email(email) \
-        .with_direccion(direccion) \
-        .build()
+    usuario = usuariocontroler.create_usuario()
     
     print(usuario)
 
