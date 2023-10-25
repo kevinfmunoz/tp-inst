@@ -1,11 +1,11 @@
-from dispenser import Dispenser
+from domain.dispenser import Dispenser
 
-class Dollar50Dispenser(Dispenser):
+class Dollar10Dispenser(Dispenser):
     def dispense(self, amount):
-        if amount >= 50:
-            bills = amount // 50
-            remainder = amount % 50
-            print(f"Dispensing {bills} $50 bills")
+        if amount >= 10:
+            bills = amount // 10
+            remainder = amount % 10
+            print(f"Dispensing {bills} $10 bills")
             if remainder > 0:
                 if self.next_dispenser is not None:
                     self.next_dispenser.dispense(remainder)

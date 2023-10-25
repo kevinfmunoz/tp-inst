@@ -1,4 +1,4 @@
-from dispenser import Dispenser
+from domain.dispenser import Dispenser
 
 class Dollar20Dispenser(Dispenser):
     def dispense(self, amount):

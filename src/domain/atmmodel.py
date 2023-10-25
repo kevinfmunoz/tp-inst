@@ -1,4 +1,4 @@
-from service.dollar100dispenser import Dollar100Dispenser
+from service.dollar100dispenserservice import Dollar100Dispenser
 
 class ATMModel:
     def __init__(self):
