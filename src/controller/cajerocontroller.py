@@ -1,4 +1,4 @@
-class AtmHandler:
+class Handler:
   
     def set_next(self, handler):
         pass

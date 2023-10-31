@@ -1,8 +1,8 @@
-from controller.cajerocontroller import AtmHandler
+from controller.cajerocontroller import Handler
 
-class CajeroHandler(AtmHandler):
+class CajeroHandler(Handler):
 
-    _next_handler: AtmHandler = None
+    _next_handler: Handler = None
 
     def set_next(self, handler):
         self._next_handler = handler
