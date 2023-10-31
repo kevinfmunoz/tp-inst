@@ -1,25 +1,14 @@
-from domain.usuariobuilder import UsuarioBuilder
-from controller.atmcontroller import ATMController
-from domain.atmmodel import ATMModel
+from domain.cajero import cajero
+from service.billete100service import billete100service
+from service.billete50service import billete50service
+from service.billete200service import billete200service
 
 
 if __name__ == "__main__":
-    model = ATMModel()
-    controller = ATMController(model)
+    billete100 = billete100service()
+    billete200 = billete200service()
+    billete50 = billete50service()
 
-    amount = int(input("Enter the amount to withdraw: $"))
-    controller.run(amount)
-
-def main():
+    billete100.set_next(billete50).set_next(billete200)
     
-    usuario = UsuarioBuilder().with_nombre("kevin")\
-                                .with_apellido("munoz")\
-                                .with_edad("19")\
-                                .with_email("km6267282823@gmail.com")\
-                                .with_direccion("bellocq")\
-                                .build()
-    
-    print(usuario)
-
-if __name__ == "__main__":
-    main()
+    cajero(1200)
