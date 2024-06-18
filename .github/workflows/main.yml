@@ -29,7 +29,7 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest  # Asegúrate de que pytest esté en tu requirements.txt
+        pytest  
 
     - name: Lint with flake8
       run: |
